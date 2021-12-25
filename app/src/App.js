@@ -1,11 +1,18 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Home from "./Home/Home";
+import Home from "./Page/Home";
+import "./assets/css/styles.css";
+
+import { Routes, Route, Link } from "react-router-dom";
+import Portfolio from "./Page/Portfolio";
 
 function App() {
   return (
-    <div className="justify-content-md-center">
-      <Home />
+    <div className="app">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/portofolio" element={<Portfolio />} />
+      </Routes>
     </div>
   );
 }
